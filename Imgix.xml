@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="Imgix" extends="Group">
+	<script type="text/brightscript" uri="Imgix.brs" />
+
+	<interface>
+    <field id="uri" type="string" />
+    <field id="height" type="float" alias="poster.height" />
+    <field id="width" type="float" alias="poster.width" />
+    <field id="loadSync" type="boolean" alias="poster.loadSync" />
+    <field id="loadWidth" type="float" alias="poster.loadWidth" />
+    <field id="loadHeight" type="float" alias="poster.loadHeight" />
+    <field id="loadDisplayMode" type="string" value="scaleToZoom" alias="poster.loadDisplayMode" />
+    <field id="loadStatus" type="string" alias="poster.loadStatus" />
+    <field id="bitmapWidth" type="float" alias="poster.bitmapWidth" />
+    <field id="bitmapHeight" type="float" alias="poster.bitmapHeight" />
+    <field id="bitmapMargins" type="assocarray" alias="poster.bitmapMargins" />
+    <field id="blendColor" type="color" alias="poster.blendColor" />
+    <field id="loadingBitmapUri" type="string" alias="poster.loadingBitmapUri" />
+    <field id="loadingBitmapOpacity" type="float" alias="poster.loadingBitmapOpacity" />
+    <field id="failedBitmapUri" type="string" alias="poster.failedBitmapUri" />
+    <field id="failedBitmapOpacity" type="float" alias="poster.failedBitmapOpacity" />
+    <field id="audioGuideText" type="string" alias="poster.audioGuideText" />
+
+    <field id="fetchColorPallete" type="boolean" />
+    <field id="colorPallete" type="assocarray" />
+
+    <field id="auto" type="string" value="format,enhance,compress" />
+    <field id="blend" type="string" value="" />
+    <field id="blend-align" type="string" value="" />
+    <field id="blend-alpha" type="float" value="-1" />
+    <field id="blend-color" type="string" value="" />
+    <field id="blend-crop" type="string" value="" />
+    <field id="blend-fit" type="string" value="" />
+    <field id="blend-h" type="float" value="-1" />
+    <field id="blend-mode" type="string" value="" />
+    <field id="blend-pad" type="float" value="-1" />
+    <field id="blend-size" type="string" value="" />
+    <field id="blend-w" type="float" value="-1" />
+    <field id="blend-x" type="float" value="-1" />
+    <field id="blend-y" type="float" value="-1" />
+    <field id="bri" type="float" value="-1" />
+    <field id="border" type="string" value="" />
+    <field id="border-left" type="float" value="-1" />
+    <field id="border-right" type="float" value="-1" />
+    <field id="border-top" type="float" value="-1" />
+    <field id="border-bottom" type="float" value="-1" />
+    <field id="border-radius" type="array" value="[]" />
+    <field id="fit" type="string" value="" />
+    <field id="fm" type="string" value="" />
+	</interface>
+
+	<children>
+    <Poster id="poster" />
+    <Animation id="debounce" duration="0.1">
+      <FloatFieldInterpolator id="interp" key="[0.0, 1.0]" keyValue="[0.0, 1.0]" fieldToInterp="poster.opacity" />
+    </Animation>
+	</children>
+</component>

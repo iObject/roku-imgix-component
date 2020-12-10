@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="ImgixFetchJSON" extends="Task">
+	<script type="text/brightscript" uri="ImgixFetchJSON.brs" />
+
+	<interface>
+    <field id="url" type="string" />
+    <field id="response" type="assocarray" />
+	</interface>
+
+	<children />
+</component>
